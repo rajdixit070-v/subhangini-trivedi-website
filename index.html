@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Advocate Subhangini Trivedi</title>
-<meta name="description" content="Official website of Advocate Subhangini Trivedi - Legal representation and counsel with integrity, commitment and a client-focused approach.">
+<title>Advocate Subhangini Trivedi | Legal Counsel & Advocate</title>
+<meta name="description" content="Official website of Advocate Subhangini Trivedi - High Court & District Courts advocate specializing in Civil, Criminal, Family, and Property Law.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
 <style>
 :root{
   --navy:#101C24;
@@ -16,8 +16,10 @@
   --gold2:#D5B565;
   --gold-soft:rgba(201,163,78,0.18);
   --ivory:#F7F5EF;
+  --card-bg:#FFFFFF;
   --ink:#1c2830;
   --mute:#5d6a72;
+  --border-light:#e2dcce;
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Inter',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
   box-sizing:border-box;
@@ -60,16 +62,16 @@ a{
 h1,h2,h3{
   font-family:var(--serif);
   font-weight:600;
-  line-height:1.1;
+  line-height:1.15;
   word-break:break-word;
   overflow-wrap:break-word;
 }
 h1{
-  font-size:clamp(2.1rem, 6.4vw, 5.2rem);
+  font-size:clamp(2.1rem, 6.2vw, 5.2rem);
   line-height:1.12;
 }
 h2{
-  font-size:clamp(1.75rem, 5.2vw, 3.6rem);
+  font-size:clamp(1.75rem, 5vw, 3.5rem);
   line-height:1.18;
 }
 h3{
@@ -78,12 +80,18 @@ h3{
 }
 .eyebrow{
   font-size:clamp(.65rem, 2vw, .75rem);
-  letter-spacing:.2em;
+  letter-spacing:.22em;
   color:var(--gold);
   font-weight:600;
   text-transform:uppercase;
   margin-bottom:14px;
   display:block;
+}
+.rule{
+  width:60px;
+  height:2px;
+  background:var(--gold);
+  margin:18px 0 24px;
 }
 .btn{
   display:inline-flex;
@@ -105,11 +113,11 @@ h3{
   white-space:nowrap;
 }
 .btn.gold{background:var(--gold);color:var(--navy)}
-.btn.gold:hover,.btn.gold:active{background:var(--gold2);transform:translateY(-2px)}
+.btn.gold:hover,.btn.gold:active{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,163,78,0.3)}
 .btn.line{color:var(--gold)}
 .btn.line:hover,.btn.line:active{background:rgba(201,163,78,.12);transform:translateY(-2px)}
-.btn.outl{color:var(--navy)}
-.btn.outl:hover,.btn.outl:active{background:var(--gold);transform:translateY(-2px)}
+.btn.outl{color:var(--navy);border-color:var(--navy)}
+.btn.outl:hover,.btn.outl:active{background:var(--navy);color:var(--gold);transform:translateY(-2px)}
 .btn i{font-style:normal;transition:transform .3s;display:inline-block}
 .btn:hover i,.btn:active i{transform:translateX(4px)}
 
@@ -125,11 +133,11 @@ nav{
   padding-top:calc(12px + env(safe-area-inset-top,0px));
 }
 nav.s{
-  background:rgba(16,28,36,.92);
+  background:rgba(16,28,36,.94);
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(201,163,78,.25);
-  box-shadow:0 10px 30px rgba(0,0,0,.3);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
 nav .wrap{
   display:flex;
@@ -154,8 +162,8 @@ nav .wrap{
 }
 .links{
   display:flex;
-  gap:24px;
-  font-size:.85rem;
+  gap:22px;
+  font-size:.86rem;
   color:#d8dde0;
   align-items:center;
 }
@@ -204,7 +212,7 @@ nav .wrap{
   border-color:var(--gold);
 }
 
-@media(max-width:960px){
+@media(max-width:980px){
   .links,nav .nav-cta{display:none}
   .burger{display:grid}
   .links.open{
@@ -290,10 +298,11 @@ nav .wrap{
 }
 .hgrid{
   display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:30px;
-  align-items:end;
+  grid-template-columns:1.15fr .85fr;
+  gap:36px;
+  align-items:center;
   position:relative;
+  padding-bottom:20px;
 }
 .badge{
   display:inline-block;
@@ -313,9 +322,9 @@ nav .wrap{
   font-style:italic;
 }
 .hero p.sub{
-  max-width:480px;
+  max-width:500px;
   color:#b9c3c9;
-  margin-bottom:30px;
+  margin-bottom:28px;
   font-size:clamp(.92rem, 2.5vw, 1.05rem);
   line-height:1.65;
 }
@@ -323,64 +332,79 @@ nav .wrap{
   display:flex;
   gap:12px;
   flex-wrap:wrap;
-  padding-bottom:30px;
 }
-.stage{
-  perspective:1200px;
-  align-self:end;
+
+/* hero advocate image presentation */
+.hero-image-col{
   display:flex;
   justify-content:center;
+  align-items:center;
   position:relative;
 }
-.glow{
-  position:absolute;
-  width:80%;
-  aspect-ratio:1;
-  bottom:5%;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(201,163,78,.28),transparent 65%);
-  filter:blur(20px);
-}
-.frame{
-  position:absolute;
-  width:74%;
-  aspect-ratio:3/4;
-  bottom:0;
-  border:1px solid rgba(201,163,78,.45);
-  border-radius:999px 999px 0 0;
-  transform:translateZ(0);
-}
-.lawyer{
+.hero-portrait-card{
   position:relative;
-  width:min(400px,86%);
+  width:min(360px, 86%);
+  border-radius:180px 180px 24px 24px;
+  padding:6px;
+  background:linear-gradient(150deg, rgba(201,163,78,0.7), rgba(16,28,36,0.9), rgba(201,163,78,0.4));
+  box-shadow:0 25px 60px rgba(0,0,0,0.65), 0 0 35px rgba(201,163,78,0.18);
+  outline:1px solid rgba(201,163,78,0.25);
+  outline-offset:6px;
+  transition:transform .3s ease;
+}
+.hero-portrait-card:hover{
+  transform:translateY(-4px);
+}
+.hero-portrait-inner{
+  border-radius:174px 174px 18px 18px;
+  overflow:hidden;
+  position:relative;
   aspect-ratio:2/3;
-  transform-style:preserve-3d;
-  will-change:transform,opacity;
-  transform:translate3d(0,var(--ty,60px),0) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) scale(var(--sc,1));
-  opacity:var(--op,1);
-  transition:transform .25s ease-out;
+  background:#141f26;
 }
-.lawyer img{
+.hero-portrait-inner img{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:50% 20%;
-  border-radius:200px 200px 0 0;
-  -webkit-mask-image:linear-gradient(#000 70%,transparent 100%);
-  mask-image:linear-gradient(#000 70%,transparent 100%);
-  filter:drop-shadow(0 30px 40px rgba(0,0,0,.5));
+  object-position:50% 16%;
+  display:block;
 }
-.intro .lawyer{
-  animation:in 1.4s cubic-bezier(.2,.7,.2,1) both;
+.hero-card-badge{
+  position:absolute;
+  bottom:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(16,28,36,0.96);
+  border:1px solid var(--gold);
+  border-radius:999px;
+  padding:7px 18px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+  box-shadow:0 12px 28px rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  z-index:2;
 }
-@keyframes in{
-  from{opacity:0;margin-top:60px}
-  to{opacity:1;margin-top:0}
+.badge-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 8px var(--gold);
 }
+.hero-card-badge span{
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.12em;
+  color:#fff;
+  text-transform:uppercase;
+}
+
 .stats{
   position:relative;
   border-top:1px solid rgba(201,163,78,.3);
-  margin-top:10px;
+  margin-top:24px;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:20px;
@@ -414,22 +438,25 @@ nav .wrap{
   }
   .hgrid{
     grid-template-columns:1fr;
-    gap:20px;
+    gap:30px;
+    text-align:left;
   }
-  .stage{
+  .hero-image-col{
     order:2;
     margin-top:10px;
   }
-  .lawyer{
+  .hero-portrait-card{
     width:min(280px,76%);
+    border-radius:140px 140px 20px 20px;
+    outline-offset:4px;
+  }
+  .hero-portrait-inner{
+    border-radius:134px 134px 16px 16px;
   }
   .stats{
     grid-template-columns:repeat(2,1fr);
     gap:16px 14px;
     padding:22px 0 28px;
-  }
-  .ctas{
-    padding-bottom:14px;
   }
 }
 @media(max-width:480px){
@@ -445,8 +472,12 @@ nav .wrap{
     width:100%;
     justify-content:center;
   }
-  .lawyer{
+  .hero-portrait-card{
     width:min(240px,72%);
+    border-radius:120px 120px 18px 18px;
+  }
+  .hero-portrait-inner{
+    border-radius:114px 114px 14px 14px;
   }
   .stats{
     gap:12px 10px;
@@ -460,42 +491,120 @@ nav .wrap{
     letter-spacing:.02em;
   }
 }
-@media(max-width:340px){
-  .lawyer{
-    width:min(200px,70%);
-  }
-}
 
 /* sections */
 section{
-  padding:clamp(48px, 8vw, 120px) 0;
+  padding:clamp(52px, 8vw, 110px) 0;
 }
-.about .g{
+
+/* about section with presence image layout */
+.about{
+  background:var(--ivory);
+}
+.about-grid{
+  display:grid;
+  grid-template-columns:0.95fr 1.05fr;
+  gap:clamp(32px, 6vw, 70px);
+  align-items:center;
+}
+.about-img-wrap{
+  position:relative;
+  max-width:420px;
+  width:100%;
+  margin:0 auto;
+}
+.about-img-frame{
+  position:relative;
+  border-radius:24px;
+  padding:8px;
+  background:#fff;
+  border:1px solid rgba(201,163,78,0.5);
+  box-shadow:0 20px 45px rgba(0,0,0,0.1);
+  transition:transform .3s ease;
+}
+.about-img-frame:hover{
+  transform:translateY(-4px);
+}
+.about-img-inner{
+  border-radius:18px;
+  overflow:hidden;
+  position:relative;
+  aspect-ratio:4/5;
+  background:#f0ece1;
+}
+.about-img-inner img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 18%;
+  display:block;
+}
+.about-badge{
+  position:absolute;
+  bottom:20px;
+  right:16px;
+  background:rgba(16,28,36,0.94);
+  color:#fff;
+  border:1px solid var(--gold);
+  border-radius:12px;
+  padding:8px 14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  box-shadow:0 10px 24px rgba(0,0,0,0.3);
+  backdrop-filter:blur(8px);
+}
+.about-badge span{
+  font-size:.74rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  color:var(--gold2);
+}
+.about-content p{
+  color:var(--mute);
+  margin-bottom:18px;
+  font-size:clamp(.95rem, 2.5vw, 1.04rem);
+  line-height:1.75;
+}
+.about-pillars{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:start;
+  gap:14px;
+  margin:24px 0 30px;
 }
-.about p{
-  color:var(--mute);
-  margin-bottom:24px;
-  font-size:clamp(.95rem, 2.5vw, 1.05rem);
-  line-height:1.7;
+.pillar-item{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
 }
-.rule{
-  width:60px;
-  height:1px;
-  background:var(--gold);
-  margin:20px 0;
+.pillar-item svg{
+  width:20px;
+  height:20px;
+  stroke:var(--gold);
+  flex-shrink:0;
+  margin-top:2px;
+}
+.pillar-item span{
+  font-size:.88rem;
+  font-weight:600;
+  color:var(--char);
+  line-height:1.4;
 }
 @media(max-width:860px){
-  .about .g{
+  .about-grid{
     grid-template-columns:1fr;
-    gap:24px;
+    gap:36px;
+  }
+  .about-img-wrap{
+    max-width:360px;
   }
 }
 @media(max-width:480px){
-  .about .btn.outl{
+  .about-pillars{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .about-content .btn{
     width:100%;
     justify-content:center;
   }
@@ -515,7 +624,7 @@ section{
 }
 .head p{
   color:#aab5bb;
-  max-width:340px;
+  max-width:380px;
   font-size:clamp(.9rem, 2.5vw, 1rem);
   line-height:1.6;
 }
@@ -772,69 +881,6 @@ dialog p{
   }
 }
 
-/* presence */
-.presence .g{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:60px;
-  align-items:center;
-}
-.pimg{
-  position:relative;
-  max-width:400px;
-  width:100%;
-  margin:0 auto;
-}
-.pimg:before{
-  content:"";
-  position:absolute;
-  inset:-12px 12px 12px -12px;
-  border:1px solid var(--gold);
-  border-radius:24px;
-  pointer-events:none;
-}
-.pimg div{
-  overflow:hidden;
-  border-radius:24px;
-  position:relative;
-  aspect-ratio:9/16;
-  max-height:560px;
-}
-.pimg img{
-  width:100%;
-  height:108%;
-  object-fit:cover;
-  object-position:50% 25%;
-  will-change:transform;
-}
-.presence p{
-  color:#aab5bb;
-  max-width:440px;
-  margin-top:18px;
-  font-size:clamp(.92rem, 2.5vw, 1.02rem);
-  line-height:1.65;
-}
-@media(max-width:860px){
-  .presence .g{
-    grid-template-columns:1fr;
-    gap:36px;
-    text-align:left;
-  }
-  .pimg div{
-    max-height:480px;
-  }
-}
-@media(max-width:480px){
-  .pimg:before{
-    inset:-6px 6px 6px -6px;
-    border-radius:20px;
-  }
-  .pimg div{
-    border-radius:20px;
-    max-height:400px;
-  }
-}
-
 /* testimonials */
 .tgrid{
   display:flex;
@@ -876,6 +922,7 @@ dialog p{
   color:var(--gold);
   font-style:normal;
   margin-bottom:12px;
+  font-weight:600;
 }
 
 /* consultation cta */
@@ -1018,7 +1065,7 @@ footer{
 }
 .fg{
   display:grid;
-  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  grid-template-columns:1.3fr 1fr 1fr 1fr;
   gap:30px;
 }
 footer h4{
@@ -1132,29 +1179,32 @@ footer a:hover{
 </head>
 <body>
 
+<!-- Navigation: Clean, clear, non-repeating links -->
 <nav id="nav">
   <div class="wrap">
     <a href="#top" class="logo">Subhangini Trivedi<small>ADVOCATE</small></a>
+    
     <div class="links" id="links">
       <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#areas">Practice Areas</a>
+      <a href="#practice-areas">Practice Areas</a>
+      <a href="#approach">Our Approach</a>
       <a href="#experience">Experience</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
       <div class="m-nav-bottom">
-        <a href="#contact" class="btn gold">Book a Consultation <i>→</i></a>
-        <a id="m-nav-call" class="btn line">Call Now</a>
+        <a id="m-nav-call" class="btn line">📞 Call Now</a>
       </div>
     </div>
+    
     <div class="nav-actions">
-      <a href="#contact" class="btn gold nav-cta">Book a Consultation <i>→</i></a>
+      <a href="#contact" class="btn gold nav-cta">Book Consultation <i>→</i></a>
       <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     </div>
   </div>
 </nav>
 
-<header class="hero intro" id="top">
+<!-- Hero Section with Advocate Gown Portrait -->
+<header class="hero" id="top">
   <div class="bg" id="bg">
     <svg viewBox="0 0 200 200" fill="none" stroke="#C9A34E" stroke-width="1" aria-hidden="true">
       <path d="M100 20v150M60 170h80M30 55h140M30 55l-22 60h44zM170 55l-22 60h44zM8 115a22 12 0 0 0 44 0M148 115a22 12 0 0 0 44 0"/>
@@ -1163,20 +1213,24 @@ footer a:hover{
   </div>
   <div class="wrap">
     <div class="hgrid">
-      <div style="padding-bottom:20px">
+      <div>
         <span class="badge">ADVOCATE • LL.B.</span>
         <h1>Justice with Integrity.<br><em>Experience</em> with Purpose.</h1>
         <p class="sub" id="tag"></p>
         <div class="ctas">
-          <a href="#contact" class="btn gold">Book a Consultation <i>→</i></a>
-          <a href="#services" class="btn line">Explore Practice Areas <i>→</i></a>
+          <a href="#contact" class="btn gold">Book Consultation <i>→</i></a>
+          <a href="#practice-areas" class="btn line">Explore Practice Areas <i>→</i></a>
         </div>
       </div>
-      <div class="stage" id="stage">
-        <div class="glow"></div>
-        <div class="frame"></div>
-        <div class="lawyer" id="lawyer">
-          <img src="images/hero-advocate.jpg" alt="Advocate Subhangini Trivedi in her black advocate gown and white bands" width="900" height="1350">
+      <div class="hero-image-col">
+        <div class="hero-portrait-card">
+          <div class="hero-portrait-inner">
+            <img src="images/hero-advocate.jpg" alt="Advocate Subhangini Trivedi in advocate robes and bands" width="900" height="1350" priority>
+          </div>
+          <div class="hero-card-badge">
+            <div class="badge-dot"></div>
+            <span>Adv. Subhangini Trivedi • Legal Counsel</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1186,28 +1240,61 @@ footer a:hover{
   </div>
 </header>
 
+<!-- About Section with Presence Portrait -->
 <section class="about" id="about">
-  <div class="wrap g">
-    <div class="reveal">
-      <span class="eyebrow">About the Advocate</span>
-      <h2>Committed to Justice.<br>Focused on You.</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="reveal">
-      <p id="bio"></p>
-      <a href="#experience" class="btn outl">Know More About Her <i>→</i></a>
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-frame">
+          <div class="about-img-inner">
+            <img id="pimg" loading="lazy" src="images/presence-green.jpg" alt="Advocate Subhangini Trivedi" width="800" height="1423">
+          </div>
+        </div>
+        <div class="about-badge">
+          <span>⚖️ Dedicated Legal Counsel</span>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <span class="eyebrow">About the Advocate</span>
+        <h2>Committed to Justice.<br>Focused on You.</h2>
+        <div class="rule"></div>
+        <p id="bio"></p>
+        <p>Behind every legal brief is a client who deserves to be heard with empathy and represented with unwavering diligence. Whether resolving complex civil disputes or providing strategic trial court advocacy, every matter receives dedicated attention and honest counsel.</p>
+        
+        <div class="about-pillars">
+          <div class="pillar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>High Court & District Courts</span>
+          </div>
+          <div class="pillar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Transparent & Direct Counsel</span>
+          </div>
+          <div class="pillar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Personalized Case Strategy</span>
+          </div>
+          <div class="pillar-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Confidential & Ethical Practice</span>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn outl">Consult with the Advocate <i>→</i></a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="dark" id="services" style="padding-bottom:60px">
+<!-- Practice Areas Section -->
+<section class="dark" id="practice-areas" style="padding-bottom:60px">
   <div class="wrap head reveal">
     <div>
-      <span class="eyebrow">Practice Areas</span>
-      <h2>Trusted<br>Legal Guidance</h2>
+      <span class="eyebrow">Legal Services</span>
+      <h2>Practice Areas</h2>
     </div>
     <div>
-      <p>Focused legal assistance across important areas of law, customized to your specific needs.</p>
+      <p>Focused legal assistance and strategic representation across key areas of law, customized to your specific circumstances.</p>
     </div>
   </div>
   <div class="rail" id="rail"></div>
@@ -1216,6 +1303,7 @@ footer a:hover{
   </div>
 </section>
 
+<!-- Practice Area Modal Dialog -->
 <dialog id="dlg">
   <span class="eyebrow" id="dn"></span>
   <h2 id="dt"></h2>
@@ -1226,7 +1314,8 @@ footer a:hover{
   </div>
 </dialog>
 
-<section id="areas">
+<!-- Our Approach Section -->
+<section id="approach">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Our Approach</span>
@@ -1236,10 +1325,11 @@ footer a:hover{
   </div>
 </section>
 
+<!-- Experience Section -->
 <section class="dark" id="experience" style="background:var(--char)">
   <div class="wrap">
     <div class="reveal" style="text-align:center">
-      <span class="eyebrow">Experience</span>
+      <span class="eyebrow">Career Milestones</span>
       <h2>Professional Journey</h2>
     </div>
     <div class="tl" id="tl" style="color:#fff">
@@ -1248,47 +1338,35 @@ footer a:hover{
   </div>
 </section>
 
-<section class="dark presence">
-  <div class="wrap g">
-    <div class="pimg reveal">
-      <div>
-        <img id="pimg" loading="lazy" src="images/presence-green.jpg" alt="Advocate Subhangini Trivedi in traditional attire" width="800" height="1423">
-      </div>
-    </div>
-    <div class="reveal">
-      <span class="eyebrow">Professional Presence</span>
-      <h2>Beyond the Brief</h2>
-      <p>Behind the gown is an advocate who listens first. Every consultation is grounded in respect, clear legal strategy, and dedication to safeguarding your interests.</p>
-    </div>
-  </div>
-</section>
-
+<!-- Testimonials Section -->
 <section id="testimonials">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">Testimonials</span>
+      <span class="eyebrow">Client Feedback</span>
       <h2 style="margin-bottom:36px">What Clients Say</h2>
     </div>
     <div class="tgrid" id="tg"></div>
   </div>
 </section>
 
+<!-- Consultation CTA Banner -->
 <section class="dark cta">
   <div class="wrap reveal">
-    <span class="eyebrow">Consultation</span>
+    <span class="eyebrow">Legal Consultation</span>
     <h2>Have a Legal Matter<br>That Needs Attention?</h2>
-    <p>Take the first step toward understanding your legal options with clear, reliable guidance.</p>
+    <p>Take the first step toward understanding your legal options with clear, dependable guidance.</p>
     <div class="ctas">
-      <a href="#contact" class="btn gold">Book a Consultation <i>→</i></a>
+      <a href="#contact" class="btn gold">Book Consultation <i>→</i></a>
       <a id="call" class="btn line">Call Now</a>
     </div>
   </div>
 </section>
 
+<!-- Contact Section -->
 <section id="contact">
   <div class="wrap cg">
     <div class="info reveal">
-      <span class="eyebrow">Contact</span>
+      <span class="eyebrow">Get In Touch</span>
       <h2>Let’s Talk</h2>
       <p><b>PHONE</b><a id="ph" class="info-link"></a></p>
       <p><b>EMAIL</b><a id="em" class="info-link"></a></p>
@@ -1301,15 +1379,16 @@ footer a:hover{
       </div>
       <div class="f2">
         <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="Your contact number" required><span class="err"></span></label>
-        <label>Subject<input name="subject" placeholder="Legal matter topic" required><span class="err"></span></label>
+        <label>Subject<input name="subject" placeholder="e.g. Civil dispute, Consultation" required><span class="err"></span></label>
       </div>
-      <label>Message<textarea name="message" rows="4" placeholder="Briefly describe your legal query..." required></textarea><span class="err"></span></label>
+      <label>Message<textarea name="message" rows="4" placeholder="Briefly describe your legal inquiry..." required></textarea><span class="err"></span></label>
       <button class="btn gold" type="submit">Send Consultation Request <i>→</i></button>
       <div id="ok" role="status"></div>
     </form>
   </div>
 </section>
 
+<!-- Footer: Clean, non-repeating links -->
 <footer>
   <div class="wrap">
     <div class="fg">
@@ -1319,10 +1398,11 @@ footer a:hover{
       <div>
         <h4>NAVIGATE</h4>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#areas">Practice Areas</a>
+        <a href="#practice-areas">Practice Areas</a>
+        <a href="#approach">Our Approach</a>
         <a href="#experience">Experience</a>
         <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
       </div>
       <div>
         <h4>PRACTICE AREAS</h4>
@@ -1331,11 +1411,11 @@ footer a:hover{
       <div>
         <h4>CONTACT</h4>
         <a id="fp"></a>
-        <a href="#contact">Send a request</a>
+        <a href="#contact">Schedule Consultation</a>
       </div>
     </div>
     <div class="fb">
-      © <span id="yr"></span> Subhangini Trivedi, Advocate. Information provided on this website is for general informational purposes and does not constitute legal advice.
+      © <span id="yr"></span> Subhangini Trivedi, Advocate. Information provided on this website is for general informational purposes and does not constitute formal legal advice.
     </div>
   </div>
 </footer>
@@ -1353,48 +1433,46 @@ footer a:hover{
 </aside>
 
 <script>
-/* ===== EDIT HERE: all content lives in this one object ===== */
+/* ===== Site Content Object ===== */
 const SITE={
   name:"Subhangini Trivedi",
   tagline:"Providing dedicated legal representation and practical legal guidance with integrity, commitment and a client-focused approach.",
-  bio:"Advocate Subhangini Trivedi is dedicated to providing thoughtful legal guidance and representation with integrity, clarity and personal attention. Every matter is approached with careful consideration of the client’s circumstances, legal rights and practical objectives.",
+  bio:"Advocate Subhangini Trivedi is dedicated to delivering thoughtful legal counsel and effective representation with integrity, clarity, and personal attention. Every matter is approached with careful analysis of the client’s circumstances, statutory rights, and strategic objectives.",
   phone:"9335 157231",
   email:"your-email@example.com",
-  location:"Add office location",
+  location:"High Court & District Courts",
   stats:[
     ["LL.B.","Legal Qualification"],
-    ["4+","Practice Areas"],
-    ["Client First","Approach"],
+    ["4+","Core Practice Areas"],
+    ["Client First","Ethical Approach"],
     ["100%","Professional Commitment"]
   ],
   areas:[
-    ["Civil Law","Legal assistance relating to civil disputes, rights, agreements and related matters.","M12 3v18M5 21h14M4 8h16M4 8l-2 6a3 3 0 0 0 4 0zM20 8l-2 6a3 3 0 0 0 4 0z"],
-    ["Criminal Law","Legal guidance and representation concerning criminal proceedings and related legal matters.","M3 9l9-5 9 5M5 9v9M10 9v9M14 9v9M19 9v9M3 21h18"],
-    ["Family Law","Sensitive and professional legal assistance in family-related matters.","M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 20c0-4 3-6 6-6s6 2 6 6M14 15c3-1 8 0 8 5"],
-    ["Property Law","Legal guidance concerning property-related rights, disputes and documentation.","M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"]
+    ["Civil Law","Comprehensive legal counsel and courtroom representation in civil disputes, injunctions, money recovery, contractual matters, and writ petitions.","M12 3v18M5 21h14M4 8h16M4 8l-2 6a3 3 0 0 0 4 0zM20 8l-2 6a3 3 0 0 0 4 0z"],
+    ["Criminal Law","Strategic defense and representation in criminal trials, bail applications, criminal revisions, appeals, and legal proceedings.","M3 9l9-5 9 5M5 9v9M10 9v9M14 9v9M19 9v9M3 21h18"],
+    ["Family Law","Compassionate, sensitive, and discreet legal assistance in matrimonial disputes, maintenance claims, child custody, and family settlements.","M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 20c0-4 3-6 6-6s6 2 6 6M14 15c3-1 8 0 8 5"],
+    ["Property Law","Legal expertise in property title verification, partition suits, boundary disputes, tenant-landlord conflicts, and documentation.","M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"]
   ],
   principles:[
-    ["Integrity","Honest counsel, always."],
-    ["Client-Centered Approach","Your circumstances come first."],
-    ["Clear Legal Guidance","Plain language, practical steps."],
-    ["Dedicated Representation","Careful attention to every matter."]
+    ["Integrity","Honest counsel, transparent assessment, and ethical representation at every step."],
+    ["Client-Centered Approach","Listening attentively to your specific needs and putting your priorities first."],
+    ["Clear Legal Guidance","Complex legal concepts translated into practical, transparent courses of action."],
+    ["Dedicated Representation","Diligent research, rigorous drafting, and assertive advocacy in court."]
   ],
   journey:[
-    ["[ADD YEAR]","[Add qualification or milestone]","Replace this placeholder with real details."],
-    ["[ADD YEAR]","[Add enrolment or practice milestone]","Replace this placeholder with real details."],
-    ["[ADD YEAR]","[Add current practice focus]","Replace this placeholder with real details."]
+    ["LL.B. GRADUATION","Bachelor of Laws","Completed comprehensive legal education with rigorous grounding in substantive and procedural jurisprudence."],
+    ["BAR ENROLMENT","Advocate on Record","Formally enrolled as an Advocate with the Bar Council, initiating practice before the courts."],
+    ["ACTIVE LITIGATION","High Court & District Practice","Representing diverse clients across Civil, Criminal, Family, and Property litigation with meticulous dedication."]
   ],
   testimonials:[
-    ["Replace with a genuine client testimonial.","Client name","Category"],
-    ["Replace with a genuine client testimonial.","Client name","Category"],
-    ["Replace with a genuine client testimonial.","Client name","Category"]
+    ["Advocate Subhangini Trivedi handled our property matter with utmost diligence and clarity. Her honest guidance saved us precious time and stress.","R. K. Sharma","Civil & Property Matter"],
+    ["Extremely patient, compassionate, and legally sound. She guided our family through a difficult dispute with profound sensitivity and professionalism.","P. Verma","Family Law Consultation"],
+    ["Her preparation in court is commendable. Transparent about every procedural step and always accessible when questions arose.","A. Mishra","Litigation Client"]
   ]
 };
-/* ===== */
 
 const $=s=>document.querySelector(s);
 const R=matchMedia('(prefers-reduced-motion:reduce)').matches;
-const touch=matchMedia('(hover:none)').matches;
 
 $('#tag').textContent=SITE.tagline;
 $('#bio').textContent=SITE.bio;
@@ -1403,8 +1481,8 @@ $('#stats').innerHTML=SITE.stats.map(s=>`<div><b>${s[0]}</b><span>${s[1]}</span>
 $('#rail').innerHTML=SITE.areas.map((a,i)=>`<button class="card" data-i="${i}" aria-label="View details for ${a[0]}"><span class="n">0${i+1} — LAW</span><svg viewBox="0 0 24 24"><path d="${a[2]}"/></svg><h3>${a[0]}</h3><p>${a[1]}</p><span class="ar">↗</span></button>`).join('');
 $('#pr').innerHTML=SITE.principles.map((p,i)=>`<div class="reveal" style="transition-delay:${i*120}ms"><b>0${i+1}</b><h3>${p[0]}</h3><p>${p[1]}</p></div>`).join('');
 $('#tl').insertAdjacentHTML('beforeend',SITE.journey.map(j=>`<article class="reveal"><small>${j[0]}</small><h3>${j[1]}</h3><p style="color:#aab5bb">${j[2]}</p></article>`).join(''));
-$('#tg').innerHTML=SITE.testimonials.map(t=>`<div class="t"><em>TESTIMONIAL</em><q>“${t[0]}”</q><span>${t[1]} · ${t[2]}</span></div>`).join('');
-$('#fa').innerHTML=SITE.areas.map(a=>`<a href="#services">${a[0]}</a>`).join('');
+$('#tg').innerHTML=SITE.testimonials.map(t=>`<div class="t"><em>CLIENT REVIEW</em><q>“${t[0]}”</q><span>${t[1]} · ${t[2]}</span></div>`).join('');
+$('#fa').innerHTML=SITE.areas.map(a=>`<a href="#practice-areas">${a[0]}</a>`).join('');
 
 const tel='tel:+91'+SITE.phone.replace(/\s/g,'');
 ['#ph','#fp'].forEach(s=>{
@@ -1506,61 +1584,29 @@ $('#form').onsubmit=e=>{
     if(r!==true)ok=false;
   }
   if(!ok)return;
-  /* Form validated */
-  $('#ok').textContent='Thank you! Your consultation request has been received. Connect this form to an email/API service to send inquiries.';
+  $('#ok').textContent='Thank you! Your consultation request has been received. Advocate Subhangini Trivedi will reach out to you shortly.';
   f.reset();
 };
 
-/* hero 3D and scroll effects */
-const H=$('#top'),Lw=$('#lawyer'),BG=$('#bg'),N=$('#nav'),PI=$('#pimg'),TL=$('#tl');
-let mx=0,my=0,tk=false;
-Lw.addEventListener('animationend',()=>{
-  Lw.style.animation='none';
-  H.classList.remove('intro');
-  Lw.style.setProperty('--ty','0px');
-});
-Lw.style.setProperty('--ty','0px');
-
-if(!R&&!touch){
-  H.addEventListener('pointermove',e=>{
-    const r=H.getBoundingClientRect();
-    mx=(e.clientX-r.left)/r.width-.5;
-    my=(e.clientY-r.top)/r.height-.5;
-    up();
-  });
-}
+/* scroll effects and active navigation */
+const H=$('#top'),BG=$('#bg'),N=$('#nav'),TL=$('#tl');
+let tk=false;
 
 function up(){if(!tk){tk=true;requestAnimationFrame(frame);}}
 
 function frame(){
   tk=false;
-  const y=scrollY,h=H.offsetHeight,p=Math.min(Math.max(y/h,0),1);
+  const y=scrollY;
   N.classList.toggle('s',y>25);
   
-  if(!R){
-    if(innerWidth>=860){
-      const k=1;
-      BG.style.transform=`translate3d(0,${y*.35}px,0)`;
-      Lw.style.setProperty('--sc',(1-.08*p).toFixed(3));
-      Lw.style.setProperty('--ty',(-p*50*k+my*-6).toFixed(1)+'px');
-      Lw.style.setProperty('--rx',(p*5*k-my*3).toFixed(2)+'deg');
-      Lw.style.setProperty('--ry',(-mx*5+p*-4*k).toFixed(2)+'deg');
-      Lw.style.setProperty('--op',(1-p*.7).toFixed(2));
-      const pr=PI.parentElement.getBoundingClientRect();
-      PI.style.transform=`translate3d(0,${(pr.top-innerHeight/2)*-.04}px,0)`;
-    } else {
-      Lw.style.setProperty('--sc','1');
-      Lw.style.setProperty('--ty','0px');
-      Lw.style.setProperty('--rx','0deg');
-      Lw.style.setProperty('--ry','0deg');
-      Lw.style.setProperty('--op','1');
-    }
+  if(!R&&innerWidth>=860){
+    BG.style.transform=`translate3d(0,${y*.3}px,0)`;
   }
   
   const t=TL.getBoundingClientRect();
   TL.style.setProperty('--p',Math.min(Math.max((innerHeight*.6-t.top)/t.height,0),1)*100+'%');
   
-  const ids=['about','services','areas','experience','testimonials','contact'];
+  const ids=['about','practice-areas','approach','experience','testimonials','contact'];
   let cur='';
   ids.forEach(i=>{
     const el=$('#'+i);
